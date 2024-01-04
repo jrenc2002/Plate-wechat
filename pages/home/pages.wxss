@@ -1,0 +1,4 @@
+/* pages/huanyingshiyong/pages.wxss */
+page { 
+  background: rgba(235, 236, 237, 1); 
+}

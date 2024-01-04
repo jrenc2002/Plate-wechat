@@ -1,0 +1,173 @@
+<!--pages/Food calories/Food calories.wxml-->
+<!-- 导航 -->
+<view style="position: absolute;width: 100%;height: 14%;background: rgba(255, 255, 255, 1);">
+  <view style="position: absolute;left: 10.4%;width: 12%;height: 100%;" bindtap="turnkind" data-index="0">
+    <view style="position: absolute;width: 100%;height: 53%;top: 23%;">
+      <image src="https://pic2.imgdb.cn/item/644792630d2dde5777ee6d89/Rectangle 16.png" mode="widthFix" style="position: absolute;width: 100%;" />
+    </view>
+    <view style="position: absolute;top: 69%;width: 100%;height: 15%;display: flex;justify-content: center;align-items: center;">
+      <view style="position: absolute;font-size: 12px;color: rgba(51, 51, 51, 1);">
+        主食
+      </view>
+    </view>
+    <block wx:if="{{kind==0}}">
+      <view style="position: absolute; left: 10%; bottom: 0%; width: 80%; height: 4.6%; opacity: 1; border-radius: 2px; background: rgba(104, 186, 171, 1); display: block; box-sizing: border-box">
+    </view>      
+    </block>
+  </view>
+  <view style="position: absolute;left: 31.4%;width: 12%;height: 100%;" bindtap="turnkind" data-index="1">
+    <view style="position: absolute;width: 100%;height: 53%;top: 23%;">
+      <image src="https://pic2.imgdb.cn/item/644792630d2dde5777ee6dc6/Rectangle 16（2）.png" mode="widthFix" style="position: absolute;width: 100%;" />
+    </view>
+    <view style="position: absolute;top: 69%;width: 100%;height: 15%;display: flex;justify-content: center;align-items: center;">
+      <view style="position: absolute;font-size: 12px;color: rgba(51, 51, 51, 1);">
+        蔬菜
+      </view>
+    </view>
+    <block wx:if="{{kind==1}}">
+      <view style="position: absolute; left: 10%; bottom: 0%; width: 80%; height: 4.6%; opacity: 1; border-radius: 2px; background: rgba(104, 186, 171, 1); display: block; box-sizing: border-box">
+    </view>      
+    </block>
+  </view>
+  <view style="position: absolute;left: 53.4%;width: 12%;height: 100%;" bindtap="turnkind" data-index="2">
+    <view style="position: absolute;width: 100%;height: 53%;top: 23%;">
+      <image src="https://pic2.imgdb.cn/item/644792630d2dde5777ee6da0/Rectangle 16（1）.png" mode="widthFix" style="position: absolute;width: 100%;" />
+    </view>
+    <view style="position: absolute;top: 69%;width: 100%;height: 15%;display: flex;justify-content: center;align-items: center;">
+      <view style="position: absolute;font-size: 12px;color: rgba(51, 51, 51, 1);">
+        蛋肉
+      </view>
+    </view>
+    <block wx:if="{{kind==2}}">
+      <view style="position: absolute; left: 10%; bottom: 0%; width: 80%; height: 4.6%; opacity: 1; border-radius: 2px; background: rgba(104, 186, 171, 1); display: block; box-sizing: border-box">
+    </view>      
+    </block>
+
+  </view>
+  <view style="position: absolute;left: 75.4%;width: 12%;height: 100%;" bindtap="turnkind" data-index="3">
+    <view style="position: absolute;width: 100%;height: 53%;top: 23%;">
+      <image src="https://pic2.imgdb.cn/item/644792630d2dde5777ee6d66/Rectangle 16（3）.png" mode="widthFix" style="position: absolute;width: 100%;" />
+    </view>
+    <view style="position: absolute;top: 69%;width: 100%;height: 15%;display: flex;justify-content: center;align-items: center;">
+      <view style="position: absolute;font-size: 12px;color: rgba(51, 51, 51, 1);">
+        水果
+      </view>
+    </view>
+    <block wx:if="{{kind==3}}">
+      <view style="position: absolute; left: 10%; bottom: 0%; width: 80%; height: 4.6%; opacity: 1; border-radius: 2px; background: rgba(104, 186, 171, 1); display: block; box-sizing: border-box">
+    </view>      
+    </block>
+  </view>
+</view>
+<!-- 饭 -->
+<view>
+
+  <block wx:if="{{kind==0}}" wx:for="{{foodlib[0]}}" wx:for-item="food" wx:for-index="index"wx:key="unique">
+
+    <view style="position: relative;width: 100%;height: 12vh;top: 14vh;display: flex;justify-content: center;align-items:flex-end;background-color: rgba(235, 236, 237, 1);">
+      <view style="position: absolute;  width: 95%; height: 90%; opacity: 1; border-radius: 18px; background: rgba(255, 255, 255, 1); box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06); display: block; box-sizing: border-box">
+        <view style="position: absolute;width: 70%;height: 80%;left: 3%;top: 12.5%;">
+          <view style="position: absolute;width: 25%;height: 100%;">
+            <image src="{{food.foodpath}}" mode="heightFix" style="position: absolute;height: 100%;" />
+          </view>
+          <view style="position: absolute;left:25%;top: 55%;width: 70%;height: 40%;display: flex;justify-content: center;align-items:center;">
+            <view style="position: absolute;font-size: 15px;color: rgba(153, 153, 153, 1);left: 10%;font-size: 17px;">
+              {{food.kll}}千卡/100克
+            </view>
+          </view>
+          <view style="position: absolute;left:25%;width: 70%;height: 30%;top: 6%;">
+            <view style="position: absolute;left: 10%;font-size: 15px;color: rgba(0, 0, 0, 1);font-size: 17px;">
+              {{food.name}}
+            </view>
+          </view>
+        </view>
+        <view style="position: absolute;width: 20.5%;height: 25%;right: 3.3%;top: 60%;" bindtap="addplate" data-index="{{food.id}}">
+          <image src="../../statrc/Food calories/加入餐盘.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+        </view>
+      </view>
+    </view>
+
+
+  </block>
+  <block wx:if="{{kind==1}}" wx:for="{{foodlib[1]}}" wx:for-item="food" wx:for-index="index" wx:key="unique">
+
+<view style="position: relative;width: 100%;height: 12vh;top: 14vh;display: flex;justify-content: center;align-items:flex-end;background-color: rgba(235, 236, 237, 1);">
+  <view style="position: absolute;  width: 95%; height: 90%; opacity: 1; border-radius: 18px; background: rgba(255, 255, 255, 1); box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06); display: block; box-sizing: border-box">
+    <view style="position: absolute;width: 70%;height: 80%;left: 3%;top: 12.5%;">
+      <view style="position: absolute;width: 25%;height: 100%;">
+        <image src="{{food.foodpath}}" mode="heightFix" style="position: absolute;height: 100%;" />
+      </view>
+      <view style="position: absolute;left:25%;top: 55%;width: 70%;height: 40%;display: flex;justify-content: center;align-items:center;">
+        <view style="position: absolute;font-size: 15px;color: rgba(153, 153, 153, 1);left: 10%;font-size: 17px;">
+          {{food.kll}}千卡/100克
+        </view>
+      </view>
+      <view style="position: absolute;left:25%;width: 70%;height: 30%;top: 6%;">
+        <view style="position: absolute;left: 10%;font-size: 15px;color: rgba(0, 0, 0, 1);font-size: 17px;">
+          {{food.name}}
+        </view>
+      </view>
+    </view>
+    <view style="position: absolute;width: 20.5%;height: 25%;right: 3.3%;top: 60%;" bindtap="addplate" data-index="{{food.id}}">
+      <image src="../../statrc/Food calories/加入餐盘.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+    </view>
+  </view>
+</view>
+
+
+</block>
+<block wx:if="{{kind==2}}" wx:for="{{foodlib[2]}}" wx:for-item="food" wx:for-index="index" wx:key="unique">
+
+<view style="position: relative;width: 100%;height: 12vh;top: 14vh;display: flex;justify-content: center;align-items:flex-end;background-color: rgba(235, 236, 237, 1);">
+  <view style="position: absolute;  width: 95%; height: 90%; opacity: 1; border-radius: 18px; background: rgba(255, 255, 255, 1); box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06); display: block; box-sizing: border-box">
+    <view style="position: absolute;width: 70%;height: 80%;left: 3%;top: 12.5%;">
+      <view style="position: absolute;width: 25%;height: 100%;">
+        <image src="{{food.foodpath}}" mode="heightFix" style="position: absolute;height: 100%;" />
+      </view>
+      <view style="position: absolute;left:25%;top: 55%;width: 70%;height: 40%;display: flex;justify-content: center;align-items:center;">
+        <view style="position: absolute;font-size: 15px;color: rgba(153, 153, 153, 1);left: 10%;font-size: 17px;">
+          {{food.kll}}千卡/100克
+        </view>
+      </view>
+      <view style="position: absolute;left:25%;width: 70%;height: 30%;top: 6%;">
+        <view style="position: absolute;left: 10%;font-size: 15px;color: rgba(0, 0, 0, 1);font-size: 17px;">
+          {{food.name}}
+        </view>
+      </view>
+    </view>
+    <view style="position: absolute;width: 20.5%;height: 25%;right: 3.3%;top: 60%;" bindtap="addplate" data-index="{{food.id}}">
+      <image src="../../statrc/Food calories/加入餐盘.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+    </view>
+  </view>
+</view>
+
+
+</block>
+<block wx:if="{{kind==3}}" wx:for="{{foodlib[3]}}" wx:for-item="food" wx:for-index="index" wx:key="unique">
+
+<view style="position: relative;width: 100%;height: 12vh;top: 14vh;display: flex;justify-content: center;align-items:flex-end;background-color: rgba(235, 236, 237, 1);">
+  <view style="position: absolute;  width: 95%; height: 90%; opacity: 1; border-radius: 18px; background: rgba(255, 255, 255, 1); box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06); display: block; box-sizing: border-box">
+    <view style="position: absolute;width: 70%;height: 80%;left: 3%;top: 12.5%;">
+      <view style="position: absolute;width: 25%;height: 100%;">
+        <image src="{{food.foodpath}}" mode="heightFix" style="position: absolute;height: 100%;" />
+      </view>
+      <view style="position: absolute;left:25%;top: 55%;width: 70%;height: 40%;display: flex;justify-content: center;align-items:center;">
+        <view style="position: absolute;font-size: 15px;color: rgba(153, 153, 153, 1);left: 10%;font-size: 17px;">
+          {{food.kll}}千卡/100克
+        </view>
+      </view>
+      <view style="position: absolute;left:25%;width: 70%;height: 30%;top: 6%;">
+        <view style="position: absolute;left: 10%;font-size: 15px;color: rgba(0, 0, 0, 1);font-size: 17px;">
+          {{food.name}}
+        </view>
+      </view>
+    </view>
+    <view style="position: absolute;width: 20.5%;height: 25%;right: 3.3%;top: 60%;" bindtap="addplate" data-index="{{food.id}}">
+      <image src="../../statrc/Food calories/加入餐盘.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+    </view>
+  </view>
+</view>
+
+
+</block>
+</view>

@@ -1,0 +1,159 @@
+<!--pages/recipe/recipe.wxml-->
+<!-- 导航 -->
+<view style="position: absolute;left: 0px;top: 0px;width: 100%;height: 5.2%;opacity: 1;background: #ffffff;">
+<block wx:if="{{kind==0}}">
+  <view style="position: absolute;width: 50%;height: 100%;" bindtap="turnkind" data-index="0">
+    <view style="position: absolute;left: 40.7%;top: 2%;width: 56px;height: 21px;opacity: 1;font-size: 14px;font-weight: 700;color: rgba(0, 0, 0, 1);">
+      减肥食谱
+    </view>
+    <view style="position: absolute; left: 51%; top: 68%; width: 10%; height: 10%; opacity: 1; border-radius: 2px; background: rgba(104, 186, 171, 1); display: block; box-sizing: border-box">
+    </view>
+  </view>
+  <view style="position: absolute;left: 50%; width: 50%;height: 100%;" bindtap="turnkind" data-index="1">
+    <view style="position: absolute;left: 35%;top: 2%;width: 56px;height: 21px;opacity: 1;font-size: 14px;font-weight: 700;color: rgba(153, 153, 153, 1);">
+      减脂食谱
+    </view>
+  </view>
+</block>
+<block wx:if="{{kind==1}}">
+  <view style="position: absolute;width: 50%;height: 100%;"bindtap="turnkind" data-index="0">
+    <view style="position: absolute;left: 40.7%;top: 2%;width: 56px;height: 21px;opacity: 1;font-size: 14px;font-weight: 700;color: rgba(153, 153, 153, 1);">
+      减肥食谱
+    </view>
+
+  </view>
+  <view style="position: absolute;left: 50%; width: 50%;height: 100%;" bindtap="turnkind" data-index="1">
+    <view style="position: absolute;left: 35%;top: 2%;width: 56px;height: 21px;opacity: 1;font-size: 14px;font-weight: 700;color: rgba(0, 0, 0, 1);">
+      减脂食谱
+    </view>
+    <view style="position: absolute; left: 44%; top: 68%; width: 10%; height: 10%; opacity: 1; border-radius: 2px; background: rgba(104, 186, 171, 1); display: block; box-sizing: border-box">
+    </view>
+  </view>
+</block>
+</view>
+
+
+<block wx:if="{{kind==0}}" wx:for="{{recipelib[0]}}" wx:for-item="recipe" wx:for-index="index" wx:key="unique">
+  <view style="position: relative;width: 100%;height:  14vh;top: 6vh;display: flex;justify-content: center;align-items: center;background-color:rgba(235, 236, 237, 1) ;display: flex;justify-content: center;align-items:flex-end;">
+  <view style="position: absolute;  width: 95%; height: 90%; opacity: 1; border-radius: 18px; background: rgba(255, 255, 255, 1); box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06); display: block; box-sizing: border-box">
+    <view style="position: absolute;width: 24%;height: 81%;left: 4%;top: 9.5%;">
+      <image src="{{recipe.recpath}}" mode="heightFix" style="position: absolute;height: 100%;" />
+    </view>
+    <view style="position: absolute;width: 68%;height: 24%;top: 9%;left: 32%;">
+      <view style="position: absolute;font-size: 16px;color: rgba(0, 0, 0, 1);left: 0%;">
+        {{recipe.name}}
+      </view>
+    </view>
+    <view style="position: absolute;width: 68%;height: 18%;bottom: 9.5%;left: 32%;">
+      <view style="position: absolute;font-size: 12px;color: rgba(153, 153, 153, 1);left: 0%;">
+        热量：{{recipe.kll}}千卡
+      </view>
+    </view>
+    <view style="position: absolute;width: 68%;height: 20%;left: 32%;top: 38%;">
+    <block wx:if="{{recipe.kind[0]&&recipe.kind[0].length!=0}}">
+      <view style="position: absolute;height: 100%;width: 19%;left: 0%;">
+        <view style="position: absolute;height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;background-color: rgba(104, 186, 171, 0.15);border-radius: 5px;">
+          <view style="position: absolute;opacity: 1;font-size: 10px;color: rgba(104, 186, 171, 1);">
+            {{recipe.kind[0].name}}
+          </view>
+        </view>
+      </view>  
+    </block>
+    <block wx:if="{{recipe.kind[1]&&recipe.kind[1].length!=0}}">
+      <view style="position: absolute;height: 100%;width: 19%;left: 21%;">
+        <view style="position: absolute;height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;background-color: rgba(104, 186, 171, 0.15);border-radius: 5px;">
+          <view style="position: absolute;opacity: 1;font-size: 10px;color: rgba(104, 186, 171, 1);">
+            {{recipe.kind[1].name}}
+          </view>
+        </view>
+      </view>
+    </block>
+     
+    <block wx:if="{{recipe.kind[2]&&recipe.kind[2].length!=0}}">
+      <view style="position: absolute;height: 100%;width: 19%;left: 42%;">
+        <view style="position: absolute;height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;background-color: rgba(104, 186, 171, 0.15);border-radius: 5px;">
+          <view style="padding: 0 1px;position: absolute;opacity: 1;font-size: 10px;color: rgba(104, 186, 171, 1);">
+            {{recipe.kind[2].name}}
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{recipe.kind[3]&&recipe.kind[3].length!=0}}">
+      <view style="position: absolute;height: 100%;width: 19%;left: 63%;">
+        <view style="position: absolute;height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;background-color: rgba(104, 186, 171, 0.15);border-radius: 5px;">
+          <view style="padding: 0 1px;position: absolute;opacity: 1;font-size: 10px;color: rgba(104, 186, 171, 1);">
+            {{recipe.kind[3].name}}
+          </view>
+        </view>
+      </view>
+    </block>
+
+    </view>
+    <view style="position: absolute;width: 20.5%;height: 25%;right: 3.3%;bottom: 9.5%;"bindtap="chancerecipe" data-index="{{index}}">
+      <image src="https://pic2.imgdb.cn/item/644bd9820d2dde577787a580.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+    </view>
+  </view>
+</view>
+</block>
+<block wx:if="{{kind==1}}" wx:for="{{recipelib[1]}}" wx:for-item="recipe" wx:for-index="index" wx:key="unique">
+  <view style="position: relative;width: 100%;height:  14vh;top: 6vh;display: flex;justify-content: center;align-items: center;background-color:rgba(235, 236, 237, 1) ;display: flex;justify-content: center;align-items:flex-end;">
+  <view style="position: absolute;  width: 95%; height: 90%; opacity: 1; border-radius: 18px; background: rgba(255, 255, 255, 1); box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06); display: block; box-sizing: border-box">
+    <view style="position: absolute;width: 24%;height: 81%;left: 4%;top: 9.5%;">
+      <image src="{{recipe.recpath}}" mode="heightFix" style="position: absolute;height: 100%;" />
+    </view>
+    <view style="position: absolute;width: 68%;height: 24%;top: 9%;left: 32%;">
+      <view style="position: absolute;font-size: 16px;color: rgba(0, 0, 0, 1);left: 0%;">
+        {{recipe.name}}
+      </view>
+    </view>
+    <view style="position: absolute;width: 68%;height: 18%;bottom: 9.5%;left: 32%;">
+      <view style="position: absolute;font-size: 12px;color: rgba(153, 153, 153, 1);left: 0%;">
+        热量：{{recipe.kll}}千卡
+      </view>
+    </view>
+    <view style="position: absolute;width: 68%;height: 20%;left: 32%;top: 38%;">
+    <block wx:if="{{recipe.kind[0]&&recipe.kind[0].length!=0}}">
+      <view style="position: absolute;height: 100%;width: 19%;left: 0%;">
+        <view style="position: absolute;height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;background-color: rgba(104, 186, 171, 0.15);border-radius: 5px;">
+          <view style="position: absolute;opacity: 1;font-size: 10px;color: rgba(104, 186, 171, 1);">
+            {{recipe.kind[0].name}}
+          </view>
+        </view>
+      </view>  
+    </block>
+    <block wx:if="{{recipe.kind[1]&&recipe.kind[1].length!=0}}">
+      <view style="position: absolute;height: 100%;width: 19%;left: 21%;">
+        <view style="position: absolute;height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;background-color: rgba(104, 186, 171, 0.15);border-radius: 5px;">
+          <view style="position: absolute;opacity: 1;font-size: 10px;color: rgba(104, 186, 171, 1);">
+            {{recipe.kind[1].name}}
+          </view>
+        </view>
+      </view>
+    </block>
+     
+    <block wx:if="{{recipe.kind[2]&&recipe.kind[2].length!=0}}">
+      <view style="position: absolute;height: 100%;width: 19%;left: 42%;">
+        <view style="position: absolute;height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;background-color: rgba(104, 186, 171, 0.15);border-radius: 5px;">
+          <view style="padding: 0 1px;position: absolute;opacity: 1;font-size: 10px;color: rgba(104, 186, 171, 1);">
+            {{recipe.kind[2].name}}
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{recipe.kind[3]&&recipe.kind[3].length!=0}}">
+      <view style="position: absolute;height: 100%;width: 19%;left: 63%;">
+        <view style="position: absolute;height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;background-color: rgba(104, 186, 171, 0.15);border-radius: 5px;">
+          <view style="padding: 0 1px;position: absolute;opacity: 1;font-size: 10px;color: rgba(104, 186, 171, 1);">
+            {{recipe.kind[3].name}}
+          </view>
+        </view>
+      </view>
+    </block>
+
+    </view>
+    <view style="position: absolute;width: 20.5%;height: 25%;right: 3.3%;bottom: 9.5%; " bindtap="chancerecipe" data-index="{{index}}">
+      <image src="https://pic2.imgdb.cn/item/644bd9820d2dde577787a580.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+    </view>
+  </view>
+</view>
+</block>

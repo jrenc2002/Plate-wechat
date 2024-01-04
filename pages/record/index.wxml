@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<!-- 体重数据 -->
+<view style="position: absolute; left: 3.2%; top: 1.6%; width: 93.6%; height: 37%; opacity: 1; border-radius: 18px; background: rgba(255, 255, 255, 1)">  
+  <view style="position: absolute;left: 7.5%;top: 7%;width: 85%;height: 80%;display: flex;justify-content: center;align-items: center;">
+  <image src="https://pic2.imgdb.cn/item/644bd9210d2dde577786e971.jpg" mode="heightFix" style="position: absolute;height: 100%;" />
+</view>
+</view> 
+<!-- 进度 -->
+<view style="position: absolute;left: 3.2%;top: 40%;width: 93.6%;height: 48%;opacity: 1;border-radius: 18px;background: rgba(255, 255, 255, 1);">
+<view style="position: absolute;top: 15%;width: 100%;height: 10%;">
+  <view style="position: absolute;left: 4.8%;top: 30%;width: 72.3%;height: 10px;opacity: 1;border-radius: 6px;background: rgba(247, 247, 247, 1);">
+<view style="position: absolute;top: -5px;height: 18px;opacity: 1;border-radius: 9px;background: rgba(255, 199, 39, 1);border: 1px solid rgba(255, 255, 255, 1);width: {{len}};">
+</view>
+</view>  
+<view style="right: 3.6%;top: 24%;position: absolute;font-size:12px;color:rgba(202, 202, 202, 1)">
+  可摄入总量
+</view>
+</view>
+
+
+<view style="position: absolute;left: 5%; top: 3%;color: rgba(0, 0, 0, 1);font-size:13px;">
+  饮食
+</view>
+<view style="position: absolute;left: 8.5%; top: 10%;color: rgba(0, 0, 0, 1);font-size: 13px;">
+  {{getkkl}}kcal
+</view>
+
+<view style="position: absolute;width: 100%;height: 34%;bottom: 0%;">
+  <image src="https://pic2.imgdb.cn/item/644bd9210d2dde577786e9bb.jpg" mode="widthFix" style="position: absolute;width: 81%;left: 9.4%;" />
+  <view style="position: absolute;width: 100%;height: 100%;display: flex;justify-content: center;align-items: center; ">
+    <image src="https://pic2.imgdb.cn/item/644bd95e0d2dde5777875900.png" mode="heightFix" style="position: absolute;height: 60%;" />
+  </view>
+</view>
+<view style="position: absolute;width: 100%;height: 5.5%;top: 25%;display: flex;justify-content: center;align-items: center;">
+    <image src="https://pic2.imgdb.cn/item/644bd9210d2dde577786e936.png" mode="heightFix" style="position: absolute;height: 100%;" />
+</view>
+<view style="position: absolute;top: 34%;right: 42%;font-size: 16px;color: rgba(0, 0, 0, 1);">
+{{lastkkl}}千卡
+</view>
+
+<view style="position: relative;height: 23%;width: 100%;top: 43%;display: flex;justify-content: center;align-items: center;">
+
+<block  wx:for="{{postfood}}" wx:for-item="arr" wx:for-index="index"wx:key="unique">
+  <view style="position: relative;height: 100%;width: 20%;display: flex;justify-content: center;align-items: center;">
+  <image src="https://pic2.imgdb.cn/item/644bd9210d2dde577786e99a.png" mode="widthFix" style="top:38%;position: absolute;width: 87%;" />
+  <view style="position: absolute;top: 5%;width: 100%;height: 30%;display: flex;justify-content: center;align-items: center;">
+  <view style="position: absolute;font-size: 14px;">
+    {{postfood[index].name}}
+  </view>
+  </view>
+  <view style="position: absolute;bottom: 10%;width: 100%;height: 50%;display: flex;justify-content: center;align-items: center;">
+  <view style="position: absolute;font-size: 5px;bottom: 0%;color: rgba(202, 202, 202, 1);font-size: 13px;">
+    <text style="display: flex;justify-content: center;align-items: center;text-align:center;">{{postnum[index]}}克\n{{postkll[index]}}千卡</text>
+  </view>
+  </view>
+</view>  
+</block>
+</view>
+
+</view>
+

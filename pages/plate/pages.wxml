@@ -1,0 +1,197 @@
+<!--pages/canpan1/pages.wxml-->
+<!-- behealth -->
+<view style="position: absolute;width: 100%;height: 35.5vh;justify-content:center;display: flex;">
+  <image src="https://pic2.imgdb.cn/item/645b295b0d2dde577735de38.png" mode="widthFix" style="position: absolute; width: 100%; height: 90%;"></image>
+  <view style="position: absolute;width: 32px;text-align: center;width: 100%;top: 90%;">
+    盘引
+  </view>
+</view>
+
+<!-- canpan -->
+<view style="width: 100%;height: 38vh;top: 36.5vh;position: absolute;">
+  <view style="position: absolute;left: 14%;width: 72%;height: 100%;border-radius: 18px;background: rgba(255, 255, 255, 1);">
+    <block wx:if="{{indexflag==0}}">
+      <view style="position: absolute;left: 5%;top: 5%;width: 43%;height: 90%;" bindtap="cancelchance" data-index="1">
+        <image src="https://pic2.imgdb.cn/item/6447a7a70d2dde5777102feb/NO1.png" mode="scaleToFill" style="position: absolute;width: 100%;height: 100%;"></image>
+        <view style="top: 45%;position: absolute;width: 100%;height:10%;text-align: center;color: rgba(104, 186, 171, 1);">{{chancefood[0] && chancefood[0].length!=0 ? chancefood[0]["name"] : '1号位'}}
+        </view>
+      </view>
+      <view style="position:absolute;left :52%;top :5%;width: 43%;height: 42.5%;" bindtap="cancelchance" data-index="2">
+        <image src="https://pic2.imgdb.cn/item/6447a7ac0d2dde5777103e2d/NO2.png" mode="scaleToFill" style="position:absolute;;width: 100%;height: 100%;"></image>
+        <view style="top: 40%;position: absolute;width: 100%;height:20%;text-align: center;color: rgba(23, 170, 255, 1);">{{chancefood[1] && chancefood[1].length!=0 ?chancefood[1]["name"] : '2号位'}}
+        </view>
+      </view>
+      <view style="position: absolute;left :52%;width: 43%;height: 42.5%;top: 52.5%;" bindtap="cancelchance" data-index="3">
+        <image src="https://pic2.imgdb.cn/item/6447a7ae0d2dde5777104256/NO3.png" style="position:absolute;;width: 100%;height: 100%;" mode="scaleToFill"></image>
+        <view style="top: 40%;position: absolute;width: 100%;height:20%;text-align: center;color: rgba(249, 108, 5, 1);">{{chancefood[2] && chancefood[2].length!=0 ?chancefood[2]["name"] : '3号位'}}
+        </view>
+      </view>
+
+    </block>
+    <block wx:elif="{{indexflag==1}}">
+      <view style="position: absolute;left: 5%;top: 5%;width: 43%;height: 42.5%;" bindtap="cancelchance" data-index="1">
+ 
+        <image src="https://pic2.imgdb.cn/item/6447431e0d2dde57776afff8/矩形 383.png" mode="scaleToFill" style="position: absolute;width: 100%;height: 100%;"></image>     
+        <view style="top: 45%;position: absolute;width: 100%;height:10%;text-align: center;color: rgba(104, 186, 171, 1);">{{chancefood[0] && chancefood[0].length!=0 ? chancefood[0]["name"] : '1号位'}}
+        </view>
+    
+
+      </view>
+      <view style="position:absolute;left :52%;top :5%;width: 43%;height: 42.5%;" bindtap="cancelchance" data-index="2">
+        <image src="https://pic2.imgdb.cn/item/6447431e0d2dde57776b000d/矩形 386.png" mode="scaleToFill" style="position:absolute;;width: 100%;height: 100%;"></image>
+        <view style="top: 40%;position: absolute;width: 100%;height:20%;text-align: center;color: rgba(23, 170, 255, 1);">{{chancefood[1] && chancefood[1].length!=0 ?  chancefood[1]["name"] : '2号位'}}
+        </view>
+
+      </view>
+
+      <view style="position:absolute;left :5%;top :52.5%;width: 43%;height: 42.5%;" bindtap="cancelchance" data-index="3">
+        <image src="https://pic2.imgdb.cn/item/6447431e0d2dde57776b003f/矩形 390.png" mode="scaleToFill" style="position:absolute;;width: 100%;height: 100%;"></image>
+        <view style="top: 40%;position: absolute;width: 100%;height:20%;text-align: center;color: rgba(140, 112, 217, 1);">{{chancefood[2] && chancefood[2].length!=0 ?chancefood[2]["name"] : '3号位'}}
+
+
+        </view>
+      </view>
+      <view style="position: absolute;left :52%;width: 43%;height: 42.5%;top: 52.5%;" bindtap="cancelchance" data-index="4">
+        <image src="https://pic2.imgdb.cn/item/6447431e0d2dde57776b0026/矩形 387.png" style="position:absolute;;width: 100%;height: 100%;" mode="scaleToFill"></image>
+        <view style="top: 40%;position: absolute;width: 100%;height:20%;text-align: center;color: rgba(249, 108, 5, 1);">{{chancefood[3] && chancefood[3].length!=0 ? chancefood[3]["name"] : '4号位'}}
+        </view>
+
+
+      </view>
+    </block>
+  </view>
+  <!-- 左滑 -->
+  <view style="position: absolute;top: 48%;left: 5%;width: 4%;height: 13px;">
+    <image src="../../statrc/canpan/left.png" mode="widthFix" style="position: absolute;width: 100%;" bindtap="left"></image>
+  </view>
+  <!-- 右滑 -->
+  <view style="position: absolute;top: 48%;right: 5%;width: 4%;height: 13px;">
+    <image src="../../statrc/canpan/right.png" mode="widthFix" style="position: absolute;width: 100%;" bindtap="right"></image>
+  </view>
+
+</view>
+
+<!-- 开始进餐 -->
+<view style="position: absolute;top: 76vh;width: 100%;height: 10vh;" bindtap="over">
+
+  <view style="position: absolute;width: 54%;height: 70%;left: 23%;top: 12%;border-radius: 25px;background-color: rgb(104,186,171);justify-content: center;align-items:center;display: flex;color: rgba(255, 255, 255, 1);font-size: 15px;" bindtap="updata">
+       开始进餐
+  </view>
+
+</view>
+<!-- 食物热量分析 -->
+<view style="position: absolute;left: 3.2%;top: 86vh;width: 93.6%;height: 32%;opacity: 1; background-color: rgba(255, 255, 255, 1);border-radius: 18px;">
+  <view style="width:100%;height:5vh;position: absolute;top:1vh;align-items:center;display: flex;">
+    <view style="position: absolute;font-size:16px;left: 5%;">
+      食物热量分析
+    </view>
+    <view style="position: absolute;right: 5%;font-size:16px;">
+      最大摄入
+    </view>
+
+  </view>
+  <block wx:if="{{indexflag==0}}">
+    <block wx:if="{{chancefood[0] && chancefood[0].length!=0}}">
+      <view class="row">
+        <image  src="{{chancefood[0].foodpath}}" mode="heightFix" style="height:70%;opacity: 1;border-radius: 25px;left: 5%;position: absolute;" />
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;left: 16%;position: absolute;color: rgba(0, 0, 0, 1);">
+          {{chancefood[0].name}}
+        </view>
+        <view class="rowfont">
+          {{chancefood[0].kll}}千卡/100克
+        </view>
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;right: 2%;position: absolute;width: 24%;color: rgba(104, 186, 171, 1);">
+          {{recommendget[0]}}克
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{chancefood[1] && chancefood[1].length!=0}}">
+      <view class="row">
+        <image  src="{{chancefood[1].foodpath}}" mode="heightFix" style="height:70%;opacity: 1;border-radius: 25px;left: 5%;position: absolute;" />
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;left: 16%;position: absolute;color: rgba(0, 0, 0, 1);">
+          {{chancefood[1].name}}
+        </view>
+        <view class="rowfont">
+          {{chancefood[1].kll}}千卡/100克
+        </view>
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;right: 2%;position: absolute;width: 24%;color: rgba(104, 186, 171, 1);">
+          {{recommendget[1]}}克
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{chancefood[2] && chancefood[2].length!=0}}">
+      <view class="row">
+        <image src="{{chancefood[2].foodpath}}" mode="heightFix" style="height:70%;opacity: 1;border-radius: 25px;left: 5%;position: absolute;" />
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;left: 16%;position: absolute;color: rgba(0, 0, 0, 1);">
+          {{chancefood[2].name}}
+        </view>
+        <view class="rowfont">
+          {{chancefood[2].kll}}千卡/100克
+        </view>
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;right: 2%;position: absolute;width: 24%;color: rgba(104, 186, 171, 1);">
+          {{recommendget[2]}}克
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:if="{{indexflag==1}}">
+    <block wx:if="{{chancefood[0] && chancefood[0].length!=0}}">
+      <view class="row">
+        <image  src="{{chancefood[0].foodpath}}" mode="heightFix" style="height:70%;opacity: 1;border-radius: 25px;left: 5%;position: absolute;" />
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;left: 16%;position: absolute;color: rgba(0, 0, 0, 1);">
+          {{chancefood[0].name}}
+        </view>
+        <view class="rowfont">
+          {{chancefood[0].kll}}千卡/100克
+        </view>
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;right: 2%;position: absolute;width: 24%;color: rgba(104, 186, 171, 1);">
+          {{recommendget[0]}}克
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{chancefood[1] && chancefood[1].length!=0}}">
+      <view class="row">
+        <image  src="{{chancefood[1].foodpath}}" mode="heightFix" style="height:70%;opacity: 1;border-radius: 25px;left: 5%;position: absolute;" />
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;left: 16%;position: absolute;color: rgba(0, 0, 0, 1);">
+          {{chancefood[1].name}}
+        </view>
+        <view class="rowfont">
+          {{chancefood[1].kll}}千卡/100克
+        </view>
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;right: 2%;position: absolute;width: 24%;color: rgba(104, 186, 171, 1);">
+          {{recommendget[1]}}克
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{chancefood[2] && chancefood[2].length!=0}}">
+      <view class="row">
+        <image  src="{{chancefood[2].foodpath}}" mode="heightFix" style="height:70%;opacity: 1;border-radius: 25px;left: 5%;position: absolute;" />
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;left: 16%;position: absolute;color: rgba(0, 0, 0, 1);">
+          {{chancefood[2].name}}
+        </view>
+        <view class="rowfont">
+          {{chancefood[2].kll}}千卡/100克
+        </view>
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;right: 2%;position: absolute;width: 24%;color: rgba(104, 186, 171, 1);">
+          {{recommendget[2]}}克
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{chancefood[3] && chancefood[3].length!=0}}">
+      <view class="row">
+        <image  src="{{chancefood[3].foodpath}}" mode="heightFix" style="height:70%;opacity: 1;border-radius: 25px;left: 5%;position: absolute;" />
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;left: 16%;position: absolute;color: rgba(0, 0, 0, 1);">
+          {{chancefood[3].name}}
+        </view>
+        <view class="rowfont">
+          {{chancefood[3].kll}}千卡/100克
+        </view>
+        <view style="height: 100%;align-items:center;display: flex;justify-content: center;right: 2%;position: absolute;width: 24%;color: rgba(104, 186, 171, 1);">
+          {{recommendget[3]}}克
+        </view>
+      </view>
+    </block>
+  </block>
+
+
+</view>
