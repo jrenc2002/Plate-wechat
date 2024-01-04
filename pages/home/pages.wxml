@@ -1,0 +1,166 @@
+<!--pages/huanyingshiyong/pages.wxml-->
+<!-- 欢迎使用 -->
+<view style="position: absolute;width: 100%;height: 30%;">
+  <image style="width: 100%; height: 100%; " src="https://pic2.imgdb.cn/item/644bd8c60d2dde5777865d06.png" mode="scaleToFill" />
+  <view style="position: absolute;left: 5.9%;top: 19px;width: 104px;height: 38px;opacity: 1;font-size: 26px;letter-spacing: 0px;color: rgba(255, 255, 255, 1);text-align: left;">
+    欢迎使用
+  </view>
+  <view style="position: absolute;left: 5.9%;top: 60px;width: 149px;height: 24px;opacity: 1;font-size: 16px;font-weight: 500;color: rgba(255, 255, 255, 1);">
+    Behealth 智能餐盘~
+  </view>
+</view>
+<!-- 搜索 -->
+<view style="position: absolute;width: 92%;height: 5.2%;opacity: 1;border-radius: 20px;top: 13%;left: 4%;">
+  <view style="position: absolute;width: 100%;height: 100%;opacity: 0.45;border-radius: 20px;background: rgba(247, 248, 249, 1);">
+  </view>
+  <view style="position: absolute;left: 4%;top: 25%;width: 6%;height: 50%;">
+    <image src="https://pic2.imgdb.cn/item/644bd7650d2dde5777844e61.png" mode="heightFix" style="position: absolute;height: 100%;"></image>
+  </view>
+  <view style="position: absolute;left: 13%;top: 20%;width: 180px;height: 60%;opacity: 1;font-size: 14px;color: rgba(255, 255, 255, 1);">
+    搜索你想查看的食物热量...
+  </view>
+</view>
+<!-- 饮食建议4 -->
+<view style="position: absolute; left: 4%; top: 21%; width: 92%; height: 15%; opacity: 1; border-radius: 18px; background: rgba(255, 255, 255, 1); box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06)">
+  <view style="position: absolute;width: 48.5px;height: 70%;left: 6.6%;top: 15%;">
+    <image src="https://pic2.imgdb.cn/item/644bd5010d2dde5777812c74.png" mode="widthFix" style="position: absolute;width: 100%;" />
+    <view style="position:absolute;font-size: 12px;top: 78%;"> 
+      饮食建议
+    </view>
+  </view>
+  <view style="position: absolute;width: 48.5px;height: 70%;left: 30.5%;top: 15%;">
+    <image src="https://pic2.imgdb.cn/item/644bd4f60d2dde5777811d97.png" mode="widthFix" style="position: absolute;width: 100%;" />
+    <view style="position:absolute;font-size: 12px;top: 78%;"> 
+      健康建议
+    </view>
+  </view>
+  <view style="position: absolute;width: 48.5px;height: 70%;left: 54.3%;top: 15%;">
+    <image src="https://pic2.imgdb.cn/item/644bd5010d2dde5777812ca6.png" mode="widthFix" style="position: absolute;width: 100%;" />
+    <view style="position:absolute;font-size: 12px;top: 78%;"> 
+      体重管理
+    </view>
+  </view>
+  <view style="position: absolute;width: 48.5px;height: 70%;left: 78.2%;top: 15%;">
+    <image src="https://pic2.imgdb.cn/item/644bd5010d2dde5777812cd8.png" mode="widthFix" style="position: absolute;width: 100%;" />
+    <view style="position:absolute;font-size: 12px;top: 78%;"> 
+      今日餐食
+    </view>
+  </view>
+
+</view>
+
+<!-- 食谱 -->
+<view style="position:absolute; left: 4%;top: 38%;width: 54%;height: 15.5%;opacity: 1;border-radius: 18px;" bindtap="turnrecilibchance">
+  <image src="https://pic2.imgdb.cn/item/644bd7890d2dde5777847b56.png" mode="scaleToFill" style="position: absolute;width: 100%;height: 100%;"></image>
+  <view style="position: absolute;left: 7.7%;top: 66.7%;width: 19.87px;height: 19.87px;opacity: 1;">
+    <image src="https://pic2.imgdb.cn/item/644bd7ad0d2dde577784a6d2.png" mode="heightFix" style="position: absolute;height: 100%;" />
+  </view>
+  <view style="position: absolute;height: 54%;width: 29%;right:1%;bottom: 2%;">
+    <image src="https://pic2.imgdb.cn/item/644bd7e10d2dde577784e58e.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+  </view>
+  <view style="position: absolute;left: 7%;top: 10%;font-size: 16px;color: rgba(0, 0, 0, 1);">
+    食谱
+  </view>
+  <view style="position: absolute;left: 6.4%;top: 37%;font-size: 13px;color: rgba(255, 153, 0, 1);">
+    健康营养的食谱伴你减肥
+  </view>
+</view>
+<!-- 食物热量 -->
+<view style="position: absolute;left: 61%;top: 38%;width: 35%;height: 15.5%;opacity: 1;" bindtap="turnfoodchance">
+  <image src="https://pic2.imgdb.cn/item/644bd80d0d2dde5777851b04.png" mode="scaleToFill" style="position: absolute;width: 100%;height: 100%;" />
+  <view style="position: absolute;left: 7.7%;top: 70%;width: 19.87px;height: 19.87px;opacity: 1;">
+    <image src="https://pic2.imgdb.cn/item/644bd7af0d2dde577784a990.png" mode="widthFix" style="position: absolute;width: 100%;" />
+  </view>
+  <view style="position: absolute;height: 54%;width: 29%;right:1%;bottom: 2%;">
+    <image src="https://pic2.imgdb.cn/item/644bd7e10d2dde577784e5b1.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+  </view>
+  <view style="position: absolute;left: 9%;top: 10%;font-size: 16px;color: rgba(0, 0, 0, 1);">
+    食物热量
+  </view>
+  <view style="position: absolute;left: 8%;top: 37%;font-size: 13px;color: rgba(104, 186, 171, 1);">
+    让你的健康零负担
+  </view>
+</view>
+<!-- 食谱1 -->
+<view style="position: absolute; left: 31rpx; top: 55%; width: 92%; height: 40%; opacity: 1; border-radius: 18px; background: rgba(255, 255, 255, 1); box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06)">
+<!-- 经典食谱 -->
+  <view style="position: absolute;left: 0px;top: 0px;width: 100%;height: 13.6%;opacity: 1;border-radius: 18px;background: rgba(104, 186, 171, 1);box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06);">
+    <view style="position: absolute;width: 64px;height: 24px; font-size: 16px;font-weight: 700;color: rgba(255, 255, 255, 1);text-align: left;vertical-align: top;left: 4%;top: 25%;">
+      经典食谱
+    </view>
+    <view style="position: absolute;left: 24%;top: 27%;width: 16.47px;height: 15.74px;opacity: 1;">
+      <image src="https://pic2.imgdb.cn/item/644bd8280d2dde5777853e4b.png" mode="widthFix" style="position: absolute;width: 100%;" />
+    </view>
+  </view>
+        <!-- 蛋奶 -->
+  <view style="position: absolute;width: 100%;height: 29%;top: 13.6%;">
+    <image src="https://pic2.imgdb.cn/item/644bd85b0d2dde577785a45b.png" mode="widthFix" style="width: 88%;bottom: 0%;left: 6%;position: absolute;" />
+    <view style="position: absolute;width: 17%;height: 65.6%;left: 5.5%;top: 17%;">
+      <image src="https://pic2.imgdb.cn/item/644bd85b0d2dde577785a3f9.png" mode="heightFix" style="position: absolute;height: 100%;" />
+    </view>
+    <view style="position: absolute;left: 27%;top: 16.7%;font-size: 15px;color: rgba(0, 0, 0, 1);">
+      蛋奶素食食谱
+    </view>
+    <view style="position: absolute;left: 27%;top: 42%;font-size: 13px;color: rgba(153, 153, 153, 1)">
+      鸡蛋，牛奶，玉米，红薯
+    </view>
+    <view style="position: absolute;left: 27%;top: 64%;font-size: 13px;color: rgba(153, 153, 153, 1)">
+      热量：800千卡
+    </view>
+    <view style="position: absolute;width: 22%;height: 19%;bottom: 17%;right: 5%;">
+      <view style="position: absolute;width: 26%;height: 100%;bottom: 17%;right: 52px;">
+      <image src="https://pic2.imgdb.cn/item/644bd8af0d2dde5777863295.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+    </view>
+    <view style="position: absolute;bottom: 17%;right: 0%;font-size: 12px;color: rgba(104, 186, 171, 1);" bindtap="chancerecipe" data-index="0">
+      加入餐盘
+    </view>
+    </view>
+  </view>
+      <!-- 减脂 -->
+  <view style="position: absolute;width: 100%;height: 29%;top: 42.6%;">
+    <image src="https://pic2.imgdb.cn/item/644bd85b0d2dde577785a45b.png" mode="widthFix" style="position: absolute;bottom: 0%;width: 88%;left: 6%;" />
+    <view style="position: absolute;width: 17%;height: 65.6%;left: 5.5%;top: 17%;">
+      <image src="https://pic2.imgdb.cn/item/644bd85b0d2dde577785a438.png" mode="heightFix" style="position: absolute;height: 100%;" />
+    </view>
+    <view style="position: absolute;left: 27%;top: 16.7%;font-size: 15px;color: rgba(0, 0, 0, 1);">
+      减脂食谱
+    </view>
+    <view style="position: absolute;left: 27%;top: 42%;font-size: 13px;color: rgba(153, 153, 153, 1)">
+      三明治，牛奶，蓝莓
+    </view>
+    <view style="position: absolute;left: 27%;top: 64%;font-size: 13px;color: rgba(153, 153, 153, 1)">
+      热量：800千卡
+    </view>
+    <view style="position: absolute;width: 22%;height: 19%;bottom: 17%;right: 5%;">
+      <view style="position: absolute;width: 26%;height: 100%;bottom: 17%;right: 52px;">
+      <image src="https://pic2.imgdb.cn/item/644bd8af0d2dde5777863295.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+    </view>
+    <view style="position: absolute;bottom: 17%;right: 0%;font-size: 12px;color: rgba(104, 186, 171, 1);"  bindtap="chancerecipe" data-index="1">
+      加入餐盘
+    </view>
+    </view>
+  </view>
+       <!-- 素食 -->
+  <view style="position: absolute;width: 100%;height: 29%;top: 71.6%;">
+    <view style="position: absolute;width: 17%;height: 65.6%;left: 5.5%;top: 17%;">
+      <image src="https://pic2.imgdb.cn/item/644bd85b0d2dde577785a3c2.png" mode="heightFix" style="position: absolute;height: 100%;" />
+    </view>
+    <view style="position: absolute;left: 27%;top: 16.7%;font-size: 15px;color: rgba(0, 0, 0, 1);">
+      纯素食食谱
+    </view>
+    <view style="position: absolute;left: 27%;top: 42%;font-size: 13px;color: rgba(153, 153, 153, 1)">
+      水煮白菜，鲜玉米，麦片
+    </view>
+    <view style="position: absolute;left: 27%;top: 64%;font-size: 13px;color: rgba(153, 153, 153, 1)">
+      热量：800千卡
+    </view>
+    <view style="position: absolute;width: 22%;height: 19%;bottom: 17%;right: 5%;">
+      <view style="position: absolute;width: 26%;height: 100%;bottom: 17%;right: 52px;">
+      <image src="https://pic2.imgdb.cn/item/644bd8af0d2dde5777863295.png" mode="heightFix" style="position: absolute;height: 100%;right: 0%;" />
+    </view>
+    <view style="position: absolute;bottom: 17%;right: 0%;font-size: 12px;color: rgba(104, 186, 171, 1);"  bindtap="chancerecipe" data-index="2">
+      加入餐盘
+    </view>
+    </view>
+  </view>
+</view>

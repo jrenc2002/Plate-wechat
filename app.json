@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/home/pages",
+    "pages/record/index",
+    "pages/user/logs",
+    "pages/communication/page2",
+    "pages/plate/pages",
+    "pages/reciprlib/recipelib",
+    "pages/foodlib/foodlib"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "iconPath": "./statrc/icon/homeDuotone (2).png",
+        "selectedIconPath": "./statrc/icon/homeDuotone (1).png",
+        "pagePath": "pages/home/pages",
+        "text": "首页"
+      },
+      {
+        "iconPath": "./statrc/icon/doc (2).png",
+        "selectedIconPath": "./statrc/icon/doc (1).png",
+        "pagePath": "pages/record/index",
+        "text": "记录"
+      },
+      {
+        "iconPath": "./statrc/icon/plate.png",
+        "selectedIconPath": "./statrc/icon/plate-chance.png",
+        "pagePath": "pages/plate/pages",
+        "text": "餐盘"
+      },
+      {
+        "iconPath": "./statrc/icon/message (2).png",
+        "selectedIconPath": "./statrc/icon/message (1).png",
+        "pagePath": "pages/communication/page2",
+        "text": "交流"
+      },
+      {
+        "iconPath": "./statrc/icon/user (2).png",
+        "selectedIconPath": "./statrc/icon/user (1).png",
+        "pagePath": "pages/user/logs",
+        "text": "我的"
+      }
+    ]
+  },
+  "lazyCodeLoading": "requiredComponents"
+  
+
+}

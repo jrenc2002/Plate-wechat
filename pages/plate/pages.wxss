@@ -1,0 +1,10 @@
+/* pages/canpan1/pages.wxss */
+page { 
+  background: rgba(235, 236, 237, 1); 
+}
+.row{
+  width: 100%;top: 6vh;height: 6vh;position: relative;display: flex;flex-direction: row;display: flex;align-items:center;
+}
+.rowfont{
+  height: 100%;width:40%;align-items:center;display: flex;left:32%;position: absolute;justify-content: left;color:rgba(153, 153, 153, 1);
+}
